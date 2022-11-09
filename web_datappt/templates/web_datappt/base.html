@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+
+        <title>{% block title %}Biblioteca CCOMP{% endblock %}</title>
+        <link rel="shortcut icon" href="https://i.imgur.com/pBcJsPI.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="'width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style type="text/css">
+            
+            .sidenav {height:100%; width: 240px; position: fixed; z-index: 1; top: 0; left:0; background-color: #111; overflow-x: hidden; padding-top: 20px;}
+            .sidenav a {padding: 6px 8px 6px 16px; text-decoration: none; font-size: 25px; color: #818181; display: block; text-transform: uppercase;}
+            .sidenav a:hover {color: #f1f1f1;}
+
+            .main {margin-left: 240px; padding: 0px 10px;}
+            .footer {height:80px; width: 240px; position:fixed; bottom:0; color: #f1f1f1; padding-left: 45px;}
+            .footer a{text-decoration: none; color: white; font-weight: bold; font-size: 14px; padding-left: 40px;}
+
+            .button {display: inline-block; padding: 10px 20px; text-align: center; text-decoration: none; color: #ffffff; background-color: #4CAF50; border-radius: 6px;outline: none;}
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="sidenav">
+            <a href="/" aria-current="page">Página Inicial</a>
+            <a href="{% url 'dashboard' %}" aria-current="page">Dashboard</a>
+            <a href="{% url 'about' %}" aria-current="page">Sobre</a>
+
+            <div class="footer">
+                <p>Desenvolvido por:</p>
+                <a href="https://github.com/erarich">erarich</a>
+            </div>
+        </div>
+
+        <div id="content", name="content" class="main">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <h2 class="mt-2">APLICAÇÃO PARA LIDAR COM OUTLIERS</h2>
+                    <hr class="mt-0 mb-4">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

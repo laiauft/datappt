@@ -1,0 +1,36 @@
+{% extends 'web_datappt/base.html' %}
+{% block title %}LAIA Outliers{% endblock %}
+
+{% block content %}
+
+<p>Faça upload do arquivo csv:</p>
+
+<form method="POST" class="post-form" enctype="multipart/form-data">  
+    {% csrf_token %} 
+    {{ form.as_p }}
+    <button type="submit" class="upload btn btn-default">Upload</button> 
+</form>
+
+      
+{% endblock %}
+
+    <!--    method  -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-method
+            class   -> https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class
+            enctype -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-enctype
+    -->
+
+    <!--   crsf_token -> https://docs.djangoproject.com/en/4.1/howto/csrf/#using-csrf  -->
+    <!--    type    -> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type -->
+
+
+    <!-- 
+        render: https://docs.djangoproject.com/en/4.1/topics/http/shortcuts/#render
+            render(request, template_name, context=None, content_type=None, status=None, using=None)
+            Combines a given template with a given context dictionary and returns an HttpResponse object with that rendered text.
+            https://stackoverflow.com/questions/20957388/what-is-a-context-in-django
+            
+            render(request,"laia_outliers/index.html",{'form':file_form})
+
+            file_form = 
+
+     -->
