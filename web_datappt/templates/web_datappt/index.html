@@ -3,13 +3,20 @@
 
 {% block content %}
 
-<p>Faça upload do arquivo csv:</p>
+<h2>Faça upload do arquivo csv:</h2>
 
 <form method="POST" class="post-form" enctype="multipart/form-data">  
     {% csrf_token %} 
     {{ form.as_p }}
     <button type="submit" class="upload btn btn-default">Upload</button> 
 </form>
+
+
+<h2>INFORMAÇÕES SOBRE O ARQUIVO: <h2>
+<p>Arquivo: {{name_offile}}<p>
+
+{{operacao}}
+
 
       
 {% endblock %}
@@ -31,6 +38,8 @@
             
             render(request,"laia_outliers/index.html",{'form':file_form})
 
-            file_form = 
+            file_form = FileForm(request.POST, request.FILES)
+
+https://docs.djangoproject.com/en/4.1/topics/forms/#form-rendering-options
 
      -->
