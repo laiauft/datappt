@@ -9,11 +9,9 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-<<<<<<< HEAD
-import os
-=======
 
->>>>>>> 0484ab92fb8464e8f8ac59402490aca2aaa9ba36
+import os
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,20 +27,13 @@ SECRET_KEY = 'django-insecure-5@s^ip-)bpl_&ijrtd^6gq8h7nbmo78n7f^ora0m+fl-#g87j3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-=======
-ALLOWED_HOSTS = []
->>>>>>> 0484ab92fb8464e8f8ac59402490aca2aaa9ba36
 
 
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD
     'web_datappt.apps.WebDatapptConfig',
-=======
->>>>>>> 0484ab92fb8464e8f8ac59402490aca2aaa9ba36
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -117,11 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-<<<<<<< HEAD
 TIME_ZONE = 'America/Araguaina'
-=======
-TIME_ZONE = 'UTC'
->>>>>>> 0484ab92fb8464e8f8ac59402490aca2aaa9ba36
 
 USE_I18N = True
 
@@ -132,11 +119,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-<<<<<<< HEAD
 MEDIA_URL ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-=======
->>>>>>> 0484ab92fb8464e8f8ac59402490aca2aaa9ba36
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
