@@ -12,12 +12,39 @@
 </form>
 
 
-<h2>INFORMAÇÕES SOBRE O ARQUIVO: <h2>
-<p>Arquivo: {{name_offile}}<p>
+<h2>INFORMAÇÕES SOBRE O ARQUIVO:</h2>
+<p><strong>Arquivo:</strong> {{name_offile}}</p>
+<p><strong>Quantidade de colunas:</strong> {{columns|length}}</p>
+<p><strong>Quantidade de linhas:</strong> {{rows}}</p>
+<p><strong>Informações importantes:</strong></p>
 
-{{operacao}}
+<p>{{columns}}</p>
+<p>{{operacao.0.0}}</p>
 
+<table border="1" class="dataframe">
 
+    <thead>
+            <th></th>
+            <th>mean</th>
+            <th>std</th>
+            <th>max</th>
+            <th>min</th>
+            <th>hasOutliners?</th>
+    </thead>
+    <tbody> <!-- A quantidade de <tr> varia de acordo com a quantidade de atributos, ou seja, de colunas -->
+        {% for i in range %}
+            <tr>
+                <th>{{columns.0}}</th>
+                <td>{{operacao.0.0|floatformat:3}}</td>
+                <td>{{operacao.0.1|floatformat:3}}</td>
+                <td>{{operacao.0.2|floatformat:3}}</td>
+                <td>{{operacao.0.3|floatformat:3}}</td>
+                <td>{{operacao.0.4}}</td>
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
       
 {% endblock %}
 

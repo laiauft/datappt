@@ -13,3 +13,14 @@ def file_name_function(f):
     file_name = f.name
     return file_name
 
+def list_of_columns(f):
+    list_of_columns = []
+    for col in f.columns:
+        list_of_columns.append(col)
+    return list_of_columns
+
+def list_of_rows(f):
+    num_of_rows = f.shape[0]
+    return num_of_rows
+
+

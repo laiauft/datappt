@@ -1,21 +1,10 @@
 import pandas as pd
 
-# file_name = file_name_function()
-
 max_std = 10
-# data = pd.read_csv(f'static/upload/data.csv') # dataset
-# columns = data.columns
-
-# # num_instances, num_attibutes = data.shape
-# print()
-# print("O Número de Instâncias é: ", num_instances)
-# print("O Número de Atributos é: ", num_attibutes)
-
 
 def convert_file2data(f):
     data = pd.read_csv(f'web_datappt/static/upload/'+f.name)
     return data
-
 
 def has_outliers(data, col):   
     if(data[col].std() >= max_std):
@@ -44,9 +33,5 @@ def column_attributes(data):
 
         list_of_columns.append(column)
         df_final = pd.DataFrame(list_of_columns)
-        # final2html = df_final.to_html()
-    return df_final
-
-# print()
-# print("INFORMAÇÕES SOBRE CADA ATRIBUTO: ")
-# print(column_attributes(data))
+        array_final = df_final.to_numpy()
+    return array_final
