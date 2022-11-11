@@ -1,2 +1,2 @@
 # datappt
-Data Pre Processing Tool (Ferramente para Pré-Processamento de Dados)
+Data Pre Processing Tool (Ferramenta para Pré-Processamento de Dados)
